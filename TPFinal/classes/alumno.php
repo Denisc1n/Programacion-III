@@ -15,16 +15,12 @@
             return json_encode($this);
         }
 
-        public function ToCSV($alumnoConvert){
-            $returnedValue ="";
-            foreach ($alumnoConvert as $value) {
-                $returnedValue += $value->nombre.";";
-                $returnedValue += $value->apellido.";";
-                $returnedValue += $value->dni.";";
-                $returnedValue += $value->legajo.";";
-            }
-            return $returnedValue;
+        public function ToCSV()
+        {
+            return $this->nombre.";".$this->apellido.";".$this->dni.";".$this->legajo.";";
         }
-    }
+            
+    }   
+
 
 ?>
