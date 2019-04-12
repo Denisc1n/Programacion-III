@@ -1,11 +1,32 @@
 <?php
-    require_once "classes/alumno.php";
+    require_once "actions/post.php";
+    require_once "actions/get.php";
+
+    $method = $_SERVER["REQUEST_METHOD"];
+    
+    switch ($method) {
+        case 'POST':
+           doPost();
+            break;
+
+        case 'GET':
+            doGet();
+            break;
+
+        
+        default:
+            echo "Metodo Invalido.";
+            break;
+    }
+
+    /*
     $operationType = $_GET["tipo"];
     $alumno = new alumno($_POST['nameInput'],$_POST['lastNameInput'],$_POST['idInput'],$_POST['fileIdNumber']);
     $alumnoDos = new alumno($_POST['nameInputDos'],$_POST['lastNameInputDos'],$_POST['idInputDos'],$_POST['fileIdNumberDos']);
     $arrayAlumnos = array($alumno, $alumnoDos);
     $method = $_SERVER["REQUEST_METHOD"];
     
+
 
     if($operationType === "json")
     {
@@ -30,5 +51,5 @@
     $string = rtrim($stringToFile,";");
     fwrite($referenceFile, $string);
     fclose($referenceFile);
-    
+    */
 ?>

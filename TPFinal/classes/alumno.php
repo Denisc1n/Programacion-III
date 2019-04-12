@@ -17,7 +17,7 @@
 
         public function ToCSV()
         {
-            return $this->nombre.";".$this->apellido.";".$this->dni.";".$this->legajo.";";
+            return $this->nombre.";".$this->apellido.";".$this->dni.";".$this->legajo.";".$this->photoId.";".PHP_EOL;
         }
             
     }   
