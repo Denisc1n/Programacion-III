@@ -1,0 +1,10 @@
+1 - select * from producto order by producto.pNombre
+2 - select * from proveedor where localidad like "Quilmes"
+3 - select * from envio where envio.Cantidad >= 200 and envio.Cantidad <=300
+4 - SELECT (SUM(envio.Cantidad) ) FROM envio
+5 - select DISTINCT (envio.Numero) from envio
+6 - select proveedor.Nombre, producto.pNombre from proveedor, producto
+7 - select (envio.Cantidad * producto.Precio) from envio, producto where envio.pNumero = producto.pNumero
+8 - select sum(envio.Cantidad) from envio where envio.Numero = 102 and envio.pNumero = 1
+9 - select * from producto, envio, proveedor where producto.pNumero = envio.pNumero and envio.Numero = proveedor.Numero and proveedor.Localidad = "Avellaneda"
+10 - select * from proveedor where proveedor.Domicilio like '%I%' or proveedor.Localidad like '%I%'
