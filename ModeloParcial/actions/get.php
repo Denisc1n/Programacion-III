@@ -1,8 +1,13 @@
 <?php
     include_once 'post.php';
     include_once 'classes/proveedor.php';
+    include_once 'classes/pedido.php';
     function doGet()
     {
+        if (is_null($_GET['operacion'])) {
+            echo "Operacion no definida";
+            return;
+        }
         $operation = strtolower($_GET['operacion']);
 
         switch($operation){
@@ -13,14 +18,18 @@
                 proveedores();
                 break;
 
-            case 'listarPedidos':
+            case 'listarpedidos':
                 listarPedidos();
+                break;
 
-            case 'listarPedidosProveedor':
-                listarPedidos();
+            case 'listarpedidosproveedor':
+                listarPedidosProveedor();
+                break;
 
             default:
                 echo "Invalid Operation";
+                echo "<br>";
+                echo $operation;
                 break;
         }
     }
@@ -101,7 +110,7 @@
         function listarPedidos()
         {
 
-            $referenceFile = fopen("data/pedidos.txt");
+            $referenceFile = fopen("data/pedidos.txt", 'r');
 
             $arrayDePedidos = array();
             while(!feof($referenceFile))
@@ -109,20 +118,21 @@
                 $stringProveedor = fgets($referenceFile);
                 $arrayDataPedido = explode(";",$stringProveedor);
 
-                if($arrayDataProveedor[0] == "")
+                if($arrayDataPedido[0] == "")
                     continue;
 
                 //$this->producto.";".$this->cantidad.";".$this->idProveedor";
-                $pedEncontrado = new pedidos($arrayDataPedido[0],$arrayDataPedido[1],$arrayDataPedido[2]);
-         
+                $pedEncontrado = new Pedido($arrayDataPedido[0],$arrayDataPedido[1],$arrayDataPedido[2]);
+
                 array_push($arrayDePedidos, $pedEncontrado);
+            }
+            fclose( $referenceFile );
 
                 if(count($arrayDePedidos) > 0){
                     echo "Pedido(s) encontrado(s)";
         
                     foreach ($arrayDePedidos as $ap) {
                         $proveedor = validarProveedor($ap->idProveedor);
-
                         $ap->idProveedor = $ap->idProveedor." ".$proveedor->nombre;
 
                         echo $ap->ToString();
@@ -131,12 +141,15 @@
                 else{
                     echo "No hay Pedidos";
                 }
+                return;
             }
 
-        }
-
-        public listarPedidosProveedor()
+        function listarPedidosProveedor()
         {
+            if (is_null($_GET['idProveedor'])) {
+                echo "No se indico idProveedor";
+                return;
+            }
             $proveedorConsulta = $_GET['idProveedor'];
             
             if(is_null($proveedorConsulta) || $proveedorConsulta == ""){
@@ -144,7 +157,36 @@
                 return;
             }
 
-            
+            $referenceFile = fopen('data/pedidos.txt','r');
+
+            $arrayDePedidos = array();
+            while(!feof($referenceFile))
+            {
+                $stringProveedor = fgets($referenceFile);
+                $arrayDataPedido = explode(";",$stringProveedor);
+
+                if($arrayDataPedido[0] == "")
+                    continue;
+
+                if ($arrayDataPedido[2] == $proveedorConsulta) {
+                //$this->producto.";".$this->cantidad.";".$this->idProveedor";
+                    $pedEncontrado = new Pedido($arrayDataPedido[0],$arrayDataPedido[1],$arrayDataPedido[2]);
+
+                    array_push($arrayDePedidos, $pedEncontrado);
+                }
+            }
+            fclose( $referenceFile );
+
+            if(count($arrayDePedidos) > 0){
+                echo "Pedido(s) encontrado(s) para el Proveedor solicitado."."<br>";
+    
+                foreach ($arrayDePedidos as $ap) {
+                   // $proveedor = validarProveedor($ap->idProveedor);
+                   // $ap->idProveedor = $ap->idProveedor." ".$proveedor->nombre;
+
+                    echo $ap->ToString();
+                }
+            }
 
         }
     

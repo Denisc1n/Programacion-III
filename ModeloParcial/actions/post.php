@@ -1,19 +1,26 @@
 <?php
     include_once('classes/proveedor.php');
+    include_once('classes/pedido.php');
 
     function doPost(){
+        if (is_null($_POST['operacion'])) {
+            echo "Operacion no definida";
+            return;
+        }
         $operation = strtolower($_POST['operacion']);
 
         switch($operation){
-            case 'cargarProveedores':
+            case 'cargarproveedores':
                 cargarProveedores();
                 break;
-            case 'hacerPedido':
+            case 'hacerpedido':
                 hacerPedido();
                 break;
 
             default:
                 echo "Invalid Operation";
+                echo "<br>";
+                echo $operation;
                 break;
         }
     }
@@ -40,7 +47,7 @@
         
         $existeProveedor = validarProveedor($pedido->idProveedor);
         if( $existeProveedor != null ){
-            $referenceFile = fopen('data/pedidos.txt',a);
+            $referenceFile = fopen('data/pedidos.txt','a');
 
             $stringToFile = $pedido->ToCSV();
 
@@ -56,9 +63,9 @@
 
     }
 
-    public function validarProveedor($idProveedor)
+    function validarProveedor($idProveedor)
     {
-        $referenceFile = fopen('data/proveedores.txt',r);
+        $referenceFile = fopen('data/proveedores.txt', 'r');
 
         while(!feof($referenceFile))
         {
@@ -67,7 +74,7 @@
             if($arrayDataProveedor[0] == "")
                 continue;
 
-            if(strtolower($arrayDataProveedor[1]) == strtolower($nombreConsulta)){
+            if(strtolower($arrayDataProveedor[0]) == strtolower($idProveedor)){
                 $provEncontrado = new Proveedor($arrayDataProveedor[1],$arrayDataProveedor[2],$arrayDataProveedor[0]);
                 return $provEncontrado;
             }

@@ -15,12 +15,12 @@
 
         public function ToCSV()
         {
-            return $this->producto.";".$this->cantidad.";".$this->idProveedor";".PHP_EOL;
+            return $this->producto.";".$this->cantidad.";".$this->idProveedor.";".PHP_EOL;
         }
 
         public function ToString(){
             return 'Producto:'.$this->producto.'<br>'.'Cantidad:'.$this->cantidad.'<br>'
-                .'Proveedor:'.$this->idProveedor'<br>';
+                .'Proveedor:'.$this->idProveedor.'<br>';
         }
     }
 
