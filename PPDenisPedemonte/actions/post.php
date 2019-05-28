@@ -7,7 +7,6 @@
         switch($operation){
             case 'crearusuario':
                 crearUsuario();
-                echo "Creacion Completa";
                 break;
             case 'login':
                 login();
@@ -21,6 +20,10 @@
                 modificarProducto();
                 break;
 
+            case 'eliminarproducto':
+                eliminarProducto();
+                break;
+
 
             default:
                 echo "Invalid Operation";
@@ -30,11 +33,35 @@
 
     function crearUsuario()
     {
-        $usuario = new Usuario( $_POST['inputNombre'],$_POST['inputClave']);
-        $referenceFile = fopen("data/usuarios.txt", 'a');
-        $stringToFile = "";
-        $stringToFile = $stringToFile . $usuario->ToCSV();
-        fwrite($referenceFile, $stringToFile);
+        if( validarNombre($_POST['inputNombre']) ){
+            $usuario = new Usuario( $_POST['inputNombre'],$_POST['inputClave']);
+            $referenceFile = fopen("data/usuarios.txt", 'a');
+            $stringToFile = "";
+            $stringToFile = $stringToFile . $usuario->ToCSV();
+            fwrite($referenceFile, $stringToFile);
+            echo "Creacion Completa";
+            return;
+        }
+        echo "Usuario ya existente.";
+        return;
+    }
+
+    function validarNombre($nombreConsulta)
+    {
+        $validate = true;
+        $referenceFile = fopen("./data/usuarios.txt", "r");
+        while(!feof($referenceFile))
+        {
+            $stringUsuario = fgets($referenceFile);
+            $arrayDataUsuarios = explode(";",$stringUsuario);
+            if($arrayDataUsuarios[0] == "")
+                continue;
+            if(strtolower($arrayDataUsuarios[0]) == strtolower($nombreConsulta)){
+                 $validate = false;
+            }
+        }
+        fclose($referenceFile);
+        return $validate;
     }
 
     function login()
@@ -63,12 +90,13 @@
 
             if(strtolower($arrayDataUsuario[0]) == strtolower($usuario) && $arrayDataUsuario[1] == $clave){
                echo "True";
-            }
-            else{
-                echo "Clave o Usuario Incorrecto.";
+               fclose($referenceFile);
+               return;
             }
         }
+        echo "Clave o Usuario Incorrecto.";
         fclose($referenceFile);
+        return;
     }
 
     function cargarproducto()
@@ -88,7 +116,7 @@
         fclose($referenceFile);
     }
 
-    function modificarProducto(){
+/*     function modificarProducto(){
         $idBusqueda = $_POST['inputId'];
         
         $referenceFile = fopen('data/productos.txt', 'w+');
@@ -130,6 +158,92 @@
         }
         foreach($nuevoArrayDeProductos as $nap){
             fwrite($referenceFile, $nap->ToString());
+        }
+        fclose($referenceFile);
+    }
+ */
+    function modificarProducto()
+    {
+        $idPost = $_POST['inputId'];
+        $nombrePost = $_POST['inputNombre'];
+        $precioPost = $_POST['inputPrecio'];
+        $usuarioPost = $_POST['inputUsuario'];
+        $productos =array();
+        $referenceFile = fopen("data/productos.txt", "r");
+        while(!feof($referenceFile))
+        {
+            $stringProducto = fgets($referenceFile);
+            $arrayDataProducto = explode(";",$stringProducto);
+            if($arrayDataProducto[0] == "")
+                continue;
+            $id = $arrayDataProducto[1];
+            $nombre = $arrayDataProducto[0];
+            $precio = $arrayDataProducto[2];
+            $imagen = $arrayDataProducto[3];
+            $usuario = $arrayDataProducto[4];
+            $productoNew = new Producto($id,$nombre,$precio,$usuario);
+            $productoNew->imagen = $imagen;
+            array_push($productos, $productoNew);      
+        }
+        fclose($referenceFile);
+        foreach ($productos as $producto) {
+            if ($producto->id  == $idPost) {
+                echo "Encontro";
+                $producto->nombre = $nombrePost;
+                $producto->precio = $precioPost;
+                $producto->usuario = $usuarioPost;
+                $origen = $_FILES["imageInput"]["tmp_name"];
+                $uploadedFileOriginalName = $_FILES["imageInput"]["name"];
+                $ext = pathinfo($uploadedFileOriginalName, PATHINFO_EXTENSION);
+                $fileDestination = "data/images/".$producto->nombre."_".$producto->id.".".$ext;  
+                if (file_exists($fileDestination)) 
+                    copy($fileDestination,"data/backup/".$producto->id."_".date("dmyhis").".".$ext);
+                break;
+            }
+        }
+        
+            $referenceFile = fopen("data/productos.txt", "w");
+        
+            foreach ($productos as $producto) {
+//
+               fwrite($referenceFile,$producto->ToCSV());
+            }
+            fclose($referenceFile);
+    }
+
+    function eliminarProducto()
+    {
+        $idPost = $_POST['inputId'];
+        $nombrePost = $_POST['inputNombre'];
+        $precioPost = $_POST['inputPrecio'];
+        $usuarioPost = $_POST['inputUsuario'];
+        $productos =array();
+        $referenceFile = fopen("data/productos.txt", "r");
+        while(!feof($referenceFile))
+        {
+            $stringProducto = fgets($referenceFile);
+            $arrayDataProducto = explode(";",$stringProducto);
+            if($arrayDataProducto[0] == "")
+                continue;
+            $id = $arrayDataProducto[1];
+            $nombre = $arrayDataProducto[0];
+            $precio = $arrayDataProducto[2];
+            $imagen = $arrayDataProducto[3];
+            $usuario = $arrayDataProducto[4];
+
+            if($id == $idPost)
+                continue;
+
+            $productoNew = new Producto($id,$nombre,$precio,$usuario);
+            $productoNew->imagen = $imagen;
+            array_push($productos, $productoNew);      
+        }
+
+        fclose($referenceFile);
+
+        $referenceFile = fopen("data/productos.txt", "w");
+        foreach ($productos as $producto) {
+            fwrite($referenceFile,$producto->ToCSV());
         }
         fclose($referenceFile);
     }

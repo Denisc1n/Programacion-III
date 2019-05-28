@@ -1,0 +1,3 @@
+Coca-Cola;1000;80;data/images/Coca-Cola_1000.jpg;Administracion;
+Fanta;1001;75;data/images/Fanta_1001.jpg;Administracion;
+Antartica;1002;70;data/images/Antartica_1002.jpg

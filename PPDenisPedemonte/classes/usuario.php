@@ -17,6 +17,11 @@
         public function ToString(){
             return '<br>'.'Nombre:'.$this->nombre.'<br>'.'Clave:'.$this->clave.'<br>';
         }
+
+        public function ToCSV()
+        {
+            return $this->nombre.";".$this->clave.";".PHP_EOL;
+        }
     }
 
 ?>

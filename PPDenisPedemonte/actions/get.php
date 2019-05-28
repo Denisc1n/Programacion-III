@@ -89,7 +89,7 @@
             echo "Producto(s) encontrado(s)"."<br>";
 
             foreach ($arrayDeProductos as $ap) {
-                echo $ap->ToString();
+                echo $ap->ToString()."<br>";
             }
         }
 
@@ -131,7 +131,7 @@
             echo "Producto(s) encontrado(s)"."<br>";
 
             foreach ($arrayDeProductos as $ap) {
-                echo $ap->ToString();
+                echo $ap->ToString()."<br>";
             }
         }
 
