@@ -1,6 +1,7 @@
 <?php
 
     require_once 'vendor\autoload.php';
+    require_once './classes/authApi.php';
 
     use \Psr\Http\Message\ServerRequestInterface as Request;
     use \Psr\Http\Message\ResponseInterface as Response;   
@@ -36,9 +37,30 @@
     
             return $res;
         });
+        
     });
 
+    $middleWare = function($request, $response, $next){
+        $response->write('<br>Entro al MiddleWare<br>');
+        authApi::validate($request,$response);
+        $response = $next($request,$response);
+        $response->write('<br>Sali del MiddleWare<br>');
+        return $response;
+    };
+
+    $segundoMiddleWare = function($request, $response, $next){
+        $response->write('<br>Entro al segundoMiddleWare<br>');
+        $response = $next($request,$response);
+        $response->write('<br>Sali del segundoMiddleWare<br>');
+        return $response;
+    };
     
+
+    $app->group('/tokenFunctions', function(){
+        $this->post('/login[/]', authApi::class. ':login');
+        $this->post('/validarToken[/]',authApi::class. ':validate');
+    })->add($middleWare)->add($segundoMiddleWare);
+
 //
 //$app->put('[/]{id}[/{nombre}][/{apellido}][/{direccion}][/{ciudad}][/{edad}]', function ( Request $req, Response $res, $args = []) {
 //    $res->getBody()->write("Datos a insertar:"."<br>"."NOMBRE:".$args['nombre']."<br>"."APELLIDO:".$args['apellido']);
@@ -50,6 +72,5 @@
 //    $res->withStatus(400)->write('Bad Request');
 //    return $res;
 //});
-
     $app->run();
 ?>
