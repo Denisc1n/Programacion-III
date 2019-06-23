@@ -14,14 +14,11 @@
             
             try {
                 $decode = JWT::decode($packageReceived[0],'serverkey',['HS256']);
-                //$decode = JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoibG9naW5TdWNjZXNzZnVsbCJ9.UYj-KZJo5yTtdTd1motffP3yTVXzwdSHhGRZlkKuS5w','serverkey',['HS256']);
         
                 return $decode;
-                
-    
             } catch ( Exception $th) {
-                //throw new Exception("TOKEN INVALIDO"." ".$th->getMessage());
-                return "invalido";
+                
+                return "INVALID";
             }
     
         }

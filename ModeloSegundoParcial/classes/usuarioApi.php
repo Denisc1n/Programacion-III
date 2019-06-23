@@ -8,18 +8,23 @@ use \Psr\Http\Message\ResponseInterface as Response;
 
 class UsuarioApi
 {
-    public function guardarUsuario( Request $req, Response $res, $args) {
+    public function guardarUsuario( Request $req, Response $res, $args)
+     {
+        try
+        {
+            $dataReceived       = $req->getParsedBody();
+            
+            if(sizeof($dataReceived) < 2){
+                return $res->write("No se recibieron datos. O los datos son insuficientes.");
+            }
 
-        $dataReceived       = $req->getParsedBody();
-        
-
-        if(sizeof($dataReceived) < 3){
-            return $res->write("No se recibieron datos. O los datos son insuficientes.");
+            $usuario = new Usuario($dataReceived["nombre"], $dataReceived["clave"],$dataReceived['sexo'],$dataReceived['perfil'] ?? "usuario" );
+            UsuarioDAO::InsertarUsuario($usuario);
+            return $res->write("Usuario Guardado con Exito.");
+        } catch( exception $e ) {
+            print "Error!!!<br/>" . $e->getMessage();
+            die();
         }
-
-        $usuario = new Usuario($dataReceived["nombre"], $dataReceived["clave"],$dataReceived['sexo'],$dataReceived['perfil'] );
-        UsuarioDAO::InsertarUsuario($usuario);
-        return $res->write("GRABO");
     }
 
     public function loginUsuario( Request $req, Response $res, $args) {
@@ -42,7 +47,8 @@ class UsuarioApi
             $payload = array(
                 'iat' => $currentTime,
                 'exp' => $currentTime+3600,
-                'data' => $salida->perfil
+                'data' => $salida->perfil,
+                'id' => $salida->id
             );
             $token = JWT::encode($payload,'serverkey');
 

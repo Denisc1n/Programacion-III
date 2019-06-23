@@ -48,6 +48,17 @@
             return $consulta->fetchAll(PDO::FETCH_CLASS,"usuarioDao"); 
         }
 
+        public static function TraerUsuario($id)
+        {    
+            $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+
+            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT * FROM usuario WHERE id <=>:id");        
+            $consulta->bindValue(':id', $id, PDO::PARAM_INT);
+            $consulta->execute();
+
+            return $consulta->fetchAll(PDO::FETCH_CLASS,"usuarioDao"); 
+        }
+
     }
 
 
