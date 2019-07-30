@@ -169,7 +169,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/tp/empleado/suspender/4",
+							"raw": "https://comanda-prog.000webhostapp.com/empleado/suspender/4",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -202,7 +202,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/tp/empleado/3",
+							"raw": "https://comanda-prog.000webhostapp.com/empleado/3",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -272,7 +272,7 @@
 							]
 						},
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/empleado/fechasLogin",
+							"raw": "https://comanda-prog.000webhostapp.com/empleado/fechasLogin",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -300,7 +300,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/empleado/operacionesSector",
+							"raw": "https://comanda-prog.000webhostapp.com/empleado/operacionesSector",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -338,7 +338,7 @@
 							]
 						},
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/empleado/operacionesSectorEmpleado",
+							"raw": "https://comanda-prog.000webhostapp.com/empleado/operacionesSectorEmpleado",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -366,7 +366,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/empleado/operacionesEmpleado/1",
+							"raw": "https://comanda-prog.000webhostapp.com/empleado/operacionesEmpleado/1",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -466,7 +466,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/tp/pedido/pnp7",
+							"raw": "https://comanda-prog.000webhostapp.com/pedido/pnp7",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -652,7 +652,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/pedido/tiempoRestante/47cbh",
+							"raw": "https://comanda-prog.000webhostapp.com/pedido/tiempoRestante/47cbh",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -735,7 +735,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/pedido/menosVendido",
+							"raw": "https://comanda-prog.000webhostapp.com/pedido/menosVendido",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -763,7 +763,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/pedido/listarFueradeTiempo",
+							"raw": "https://comanda-prog.000webhostapp.com/pedido/listarFueradeTiempo",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -791,7 +791,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/pedido/listarCancelados",
+							"raw": "https://comanda-prog.000webhostapp.com/pedido/listarCancelados",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -824,7 +824,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/mesas/listar",
+							"raw": "https://comanda-prog.000webhostapp.com/mesas/listar",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -893,7 +893,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/mesas/mesa06",
+							"raw": "https://comanda-prog.000webhostapp.com/mesas/mesa06",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -964,7 +964,7 @@
 							]
 						},
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/mesas/foto",
+							"raw": "https://comanda-prog.000webhostapp.com/mesas/foto",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -992,7 +992,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/mesas/masUsada",
+							"raw": "https://comanda-prog.000webhostapp.com/mesas/masUsada",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -1020,7 +1020,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/mesas/menosUsada",
+							"raw": "https://comanda-prog.000webhostapp.com/mesas/menosUsada",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -1048,7 +1048,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/mesas/masFacturacion",
+							"raw": "https://comanda-prog.000webhostapp.com/mesas/masFacturacion",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -1103,7 +1103,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/mesas/mayorImporte",
+							"raw": "https://comanda-prog.000webhostapp.com/mesas/mayorImporte",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -1131,7 +1131,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/mesas/menorImporte",
+							"raw": "https://comanda-prog.000webhostapp.com/mesas/menorImporte",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -1185,7 +1185,7 @@
 							]
 						},
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/mesas/facturacionEntreFechas",
+							"raw": "https://comanda-prog.000webhostapp.com/mesas/facturacionEntreFechas",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -1213,7 +1213,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/mesas/mejorPuntuacion",
+							"raw": "https://comanda-prog.000webhostapp.com/mesas/mejorPuntuacion",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -1241,7 +1241,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/mesas/peorPuntuacion",
+							"raw": "https://comanda-prog.000webhostapp.com/mesas/peorPuntuacion",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -1303,7 +1303,7 @@
 							]
 						},
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/encuesta/registrar",
+							"raw": "https://comanda-prog.000webhostapp.com/encuesta/registrar",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -1331,7 +1331,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/encuesta/listar",
+							"raw": "https://comanda-prog.000webhostapp.com/encuesta/listar",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -1364,7 +1364,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/facturas/listarPDF",
+							"raw": "https://comanda-prog.000webhostapp.com/facturas/listarPDF",
 							"protocol": "https",
 							"host": [
 								"trautariel",
@@ -1392,7 +1392,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://trautariel.000webhostapp.com/TP/facturas/listarExcel",
+							"raw": "https://comanda-prog.000webhostapp.com/facturas/listarExcel",
 							"protocol": "https",
 							"host": [
 								"trautariel",
