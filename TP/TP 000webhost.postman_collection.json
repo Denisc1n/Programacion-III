@@ -1,0 +1,1414 @@
+{
+	"info": {
+		"_postman_id": "e1193488-2981-472c-8af3-a43c4cc37d5a",
+		"name": "TP 000webhost",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Empleados",
+			"item": [
+				{
+					"name": "LoginEmpleado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "usuario",
+									"value": "denis",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://comanda-prog.000webhostapp.com/empleado/login",
+							"protocol": "https",
+							"host": [
+								"comanda-prog",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"empleado",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegistroEmpleado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NjQxOTc0ODAsIm5iZiI6MTU2NDE5NzQ4MCwiZXhwIjoxNTY0MjAxMDgwLCJpZCI6MSwibm9tYnJlIjoiRGVuaXMiLCJ1c3VhcmlvIjoiZGVuaXMiLCJwZXJmaWwiOiJzb2NpbyJ9.mFYS5EItnm0nxaKY9lbwTeqVlp1HEl2NJ3KZC9L47q8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Leonel",
+									"type": "text"
+								},
+								{
+									"key": "usuario",
+									"value": "leonelpedemonte",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "perfil",
+									"value": "mozo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://comanda-prog.000webhostapp.com/empleado/registrar",
+							"protocol": "https",
+							"host": [
+								"comanda-prog",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"empleado",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModificarEmpleado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NjQxOTk3OTcsIm5iZiI6MTU2NDE5OTc5NywiZXhwIjoxNTY0MjAzMzk3LCJpZCI6MSwibm9tYnJlIjoiRGVuaXMiLCJ1c3VhcmlvIjoiZGVuaXMiLCJwZXJmaWwiOiJzb2NpbyJ9.Df6wDM-U2Tj4vfzgS7H7_drDgINOJZS-dMopwQOwmX4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Leonel",
+									"type": "text"
+								},
+								{
+									"key": "usuario",
+									"value": "leonelpedemonte",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "perfil",
+									"value": "mozo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://comanda-prog.000webhostapp.com/empleado/modificar",
+							"protocol": "https",
+							"host": [
+								"comanda-prog",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"empleado",
+								"modificar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SuspenderEmpleado",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/tp/empleado/suspender/4",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"tp",
+								"empleado",
+								"suspender",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BorrarEmpleado",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/tp/empleado/3",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"tp",
+								"empleado",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarEmpleados",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NjQxOTc0ODAsIm5iZiI6MTU2NDE5NzQ4MCwiZXhwIjoxNTY0MjAxMDgwLCJpZCI6MSwibm9tYnJlIjoiRGVuaXMiLCJ1c3VhcmlvIjoiZGVuaXMiLCJwZXJmaWwiOiJzb2NpbyJ9.mFYS5EItnm0nxaKY9lbwTeqVlp1HEl2NJ3KZC9L47q8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://comanda-prog.000webhostapp.com/empleado/listar",
+							"protocol": "https",
+							"host": [
+								"comanda-prog",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"empleado",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista de Empleados entre fechas Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fecha1",
+									"value": "2018-11-18",
+									"type": "text"
+								},
+								{
+									"key": "fecha2",
+									"value": "2018-11-20",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/empleado/fechasLogin",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"empleado",
+								"fechasLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar cantidad operaciones por sector",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/empleado/operacionesSector",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"empleado",
+								"operacionesSector"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar cantidad operaciones por sector / empleado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sector",
+									"value": "socio",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/empleado/operacionesSectorEmpleado",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"empleado",
+								"operacionesSectorEmpleado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar cantidad operaciones empleado",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU1NzksIm5iZiI6MTU0MjY0NTU3OSwiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.-i_f9HaBg_oKwLFjNsMdFDSXuAJrGN-rfVggvlMrzWo"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/empleado/operacionesEmpleado/1",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"empleado",
+								"operacionesEmpleado",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "AgregarPedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NjQxOTkwNTUsIm5iZiI6MTU2NDE5OTA1NSwiZXhwIjoxNTY0MjAyNjU1LCJpZCI6MTQsIm5vbWJyZSI6Ikxlb25lbCIsInVzdWFyaW8iOiJsZW9uZWxwZWRlbW9udGUiLCJwZXJmaWwiOiJtb3pvIn0.fdEDgR734XlIIKLtG4lU6CHUJ6SqxdQgpxyO8z_4wF0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id_mesa",
+									"value": "mesa01",
+									"type": "text"
+								},
+								{
+									"key": "pedido",
+									"value": "Choripan",
+									"type": "text"
+								},
+								{
+									"key": "cantidad",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "importe",
+									"value": "240",
+									"type": "text"
+								},
+								{
+									"key": "cliente",
+									"value": "El Fino",
+									"type": "text"
+								},
+								{
+									"key": "sector",
+									"value": "cocina",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://comanda-prog.000webhostapp.com/pedido/registrar",
+							"protocol": "https",
+							"host": [
+								"comanda-prog",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"pedido",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CancelarPedido",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NjE3OTUsIm5iZiI6MTU0MjY2MTc5NSwiaWQiOjQsIm5vbWJyZSI6Ikpvc2UiLCJ1c3VhcmlvIjoiam9zZWxpdG8iLCJwZXJmaWwiOiJtb3pvIn0.dXfYsEuwwOHrCQX0E91NTofuVOeAu5-FXH7ByekT9iU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/tp/pedido/pnp7",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"tp",
+								"pedido",
+								"pnp7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TomarPedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NjQxOTkwNTUsIm5iZiI6MTU2NDE5OTA1NSwiZXhwIjoxNTY0MjAyNjU1LCJpZCI6MTQsIm5vbWJyZSI6Ikxlb25lbCIsInVzdWFyaW8iOiJsZW9uZWxwZWRlbW9udGUiLCJwZXJmaWwiOiJtb3pvIn0.fdEDgR734XlIIKLtG4lU6CHUJ6SqxdQgpxyO8z_4wF0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "npk5h",
+									"type": "text"
+								},
+								{
+									"key": "minutosEstimados",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "mesa",
+									"value": "mesa01",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://comanda-prog.000webhostapp.com/pedido/tomarPedido",
+							"protocol": "https",
+							"host": [
+								"comanda-prog",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"pedido",
+								"tomarPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedido listo para servir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NjQxOTkwNTUsIm5iZiI6MTU2NDE5OTA1NSwiZXhwIjoxNTY0MjAyNjU1LCJpZCI6MTQsIm5vbWJyZSI6Ikxlb25lbCIsInVzdWFyaW8iOiJsZW9uZWxwZWRlbW9udGUiLCJwZXJmaWwiOiJtb3pvIn0.fdEDgR734XlIIKLtG4lU6CHUJ6SqxdQgpxyO8z_4wF0"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "npk5h",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://comanda-prog.000webhostapp.com/pedido/pedidoListo",
+							"protocol": "https",
+							"host": [
+								"comanda-prog",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"pedido",
+								"pedidoListo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedido servido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NjQxOTkwNTUsIm5iZiI6MTU2NDE5OTA1NSwiZXhwIjoxNTY0MjAyNjU1LCJpZCI6MTQsIm5vbWJyZSI6Ikxlb25lbCIsInVzdWFyaW8iOiJsZW9uZWxwZWRlbW9udGUiLCJwZXJmaWwiOiJtb3pvIn0.fdEDgR734XlIIKLtG4lU6CHUJ6SqxdQgpxyO8z_4wF0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "npk5h",
+									"type": "text"
+								},
+								{
+									"key": "mesa",
+									"value": "mesa03",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://comanda-prog.000webhostapp.com/pedido/servirPedido",
+							"protocol": "https",
+							"host": [
+								"comanda-prog",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"pedido",
+								"servirPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CobrarMesa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NjQxOTkwNTUsIm5iZiI6MTU2NDE5OTA1NSwiZXhwIjoxNTY0MjAyNjU1LCJpZCI6MTQsIm5vbWJyZSI6Ikxlb25lbCIsInVzdWFyaW8iOiJsZW9uZWxwZWRlbW9udGUiLCJwZXJmaWwiOiJtb3pvIn0.fdEDgR734XlIIKLtG4lU6CHUJ6SqxdQgpxyO8z_4wF0"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigoMesa",
+									"value": "mesa01",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://comanda-prog.000webhostapp.com/pedido/cobrarPedido",
+							"protocol": "https",
+							"host": [
+								"comanda-prog",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"pedido",
+								"cobrarPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta de pedido por user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/pedido/tiempoRestante/47cbh",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"pedido",
+								"tiempoRestante",
+								"47cbh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Pedidos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NjQxOTk3OTcsIm5iZiI6MTU2NDE5OTc5NywiZXhwIjoxNTY0MjAzMzk3LCJpZCI6MSwibm9tYnJlIjoiRGVuaXMiLCJ1c3VhcmlvIjoiZGVuaXMiLCJwZXJmaWwiOiJzb2NpbyJ9.Df6wDM-U2Tj4vfzgS7H7_drDgINOJZS-dMopwQOwmX4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://comanda-prog.000webhostapp.com/pedido/listarTodos",
+							"protocol": "https",
+							"host": [
+								"comanda-prog",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"pedido",
+								"listarTodos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mas vendido",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NjQxOTk3OTcsIm5iZiI6MTU2NDE5OTc5NywiZXhwIjoxNTY0MjAzMzk3LCJpZCI6MSwibm9tYnJlIjoiRGVuaXMiLCJ1c3VhcmlvIjoiZGVuaXMiLCJwZXJmaWwiOiJzb2NpbyJ9.Df6wDM-U2Tj4vfzgS7H7_drDgINOJZS-dMopwQOwmX4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://comanda-prog.000webhostapp.com/pedido/masVendido",
+							"protocol": "https",
+							"host": [
+								"comanda-prog",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"pedido",
+								"masVendido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menos vendido",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NjM3MjIsIm5iZiI6MTU0MjY2MzcyMiwiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.pAEKA-C3hvgFTMHLRGGh1WjryrmqFAIlUkE_e6fDa4M"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/pedido/menosVendido",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"pedido",
+								"menosVendido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar fuera de tiempo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NjM3MjIsIm5iZiI6MTU0MjY2MzcyMiwiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.pAEKA-C3hvgFTMHLRGGh1WjryrmqFAIlUkE_e6fDa4M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/pedido/listarFueradeTiempo",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"pedido",
+								"listarFueradeTiempo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPedidosCancelados",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NjM3MjIsIm5iZiI6MTU0MjY2MzcyMiwiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.pAEKA-C3hvgFTMHLRGGh1WjryrmqFAIlUkE_e6fDa4M"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/pedido/listarCancelados",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"pedido",
+								"listarCancelados"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mesas",
+			"item": [
+				{
+					"name": "ListarMesas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/mesas/listar",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegistrarMesa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NjQxOTg1NjAsIm5iZiI6MTU2NDE5ODU2MCwiZXhwIjoxNTY0MjAyMTYwLCJpZCI6MSwibm9tYnJlIjoiRGVuaXMiLCJ1c3VhcmlvIjoiZGVuaXMiLCJwZXJmaWwiOiJzb2NpbyJ9.NCAwzoRIttpbb5FfcDzIhegvdEAIym3y7KTSu4oD83g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "mesa03",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://comanda-prog.000webhostapp.com/mesas/registrar",
+							"protocol": "https",
+							"host": [
+								"comanda-prog",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"mesas",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BorrarMesa",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/mesas/mesa06",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"mesa06"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cerrar Mesa",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NjQxOTk3OTcsIm5iZiI6MTU2NDE5OTc5NywiZXhwIjoxNTY0MjAzMzk3LCJpZCI6MSwibm9tYnJlIjoiRGVuaXMiLCJ1c3VhcmlvIjoiZGVuaXMiLCJwZXJmaWwiOiJzb2NpbyJ9.Df6wDM-U2Tj4vfzgS7H7_drDgINOJZS-dMopwQOwmX4"
+							}
+						],
+						"url": {
+							"raw": "https://comanda-prog.000webhostapp.com/mesas/cerrar/mesa01",
+							"protocol": "https",
+							"host": [
+								"comanda-prog",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"mesas",
+								"cerrar",
+								"mesa01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarFotoMesa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "mesa04",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"value": "",
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/mesas/foto",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"foto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mas usada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/mesas/masUsada",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"masUsada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menos usada",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/mesas/menosUsada",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"menosUsada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mas Facturacion",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/mesas/masFacturacion",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"masFacturacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menos facturacion",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NjQxOTk3OTcsIm5iZiI6MTU2NDE5OTc5NywiZXhwIjoxNTY0MjAzMzk3LCJpZCI6MSwibm9tYnJlIjoiRGVuaXMiLCJ1c3VhcmlvIjoiZGVuaXMiLCJwZXJmaWwiOiJzb2NpbyJ9.Df6wDM-U2Tj4vfzgS7H7_drDgINOJZS-dMopwQOwmX4"
+							}
+						],
+						"url": {
+							"raw": "https://comanda-prog.000webhostapp.com/mesas/menosFacturacion",
+							"protocol": "https",
+							"host": [
+								"comanda-prog",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"mesas",
+								"menosFacturacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mayor importe",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NjM3MjIsIm5iZiI6MTU0MjY2MzcyMiwiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.pAEKA-C3hvgFTMHLRGGh1WjryrmqFAIlUkE_e6fDa4M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/mesas/mayorImporte",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"mayorImporte"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menor importe",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/mesas/menorImporte",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"menorImporte"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Facturacion mesa entre fechas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fecha1",
+									"value": "2018-12-01",
+									"type": "text"
+								},
+								{
+									"key": "fecha2",
+									"value": "2018-12-03",
+									"type": "text"
+								},
+								{
+									"key": "codigoMesa",
+									"value": "mesa02",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/mesas/facturacionEntreFechas",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"facturacionEntreFechas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mejor puntuacion",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/mesas/mejorPuntuacion",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"mejorPuntuacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Peor Puntuacion",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/mesas/peorPuntuacion",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"mesas",
+								"peorPuntuacion"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Encuesta",
+			"item": [
+				{
+					"name": "RegistrarEncuesta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "puntuacionMesa",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "codigoMesa",
+									"value": "mesa02",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionRestaurante",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionMozo",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "puntuacionCocinero",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "comentario",
+									"value": "Un desastre la mesa.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/encuesta/registrar",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"encuesta",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarEncuesta",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/encuesta/listar",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"encuesta",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Facturacion",
+			"item": [
+				{
+					"name": "PDF",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/facturas/listarPDF",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"facturas",
+								"listarPDF"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excel",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1NDI2NDU4MjcsIm5iZiI6MTU0MjY0NTgyNywiaWQiOjEsIm5vbWJyZSI6IlBhYmxvIiwidXN1YXJpbyI6InBhYmxvIiwicGVyZmlsIjoic29jaW8ifQ.yPIkBJ-cVzfX_Ihmt-xbzf8yZ_qjpgld0W8u661sDt0"
+							}
+						],
+						"url": {
+							"raw": "https://trautariel.000webhostapp.com/TP/facturas/listarExcel",
+							"protocol": "https",
+							"host": [
+								"trautariel",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"TP",
+								"facturas",
+								"listarExcel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
