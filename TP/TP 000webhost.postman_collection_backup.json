@@ -1277,27 +1277,27 @@
 								},
 								{
 									"key": "codigoMesa",
-									"value": "mesa01",
+									"value": "mesa02",
 									"type": "text"
 								},
 								{
 									"key": "puntuacionRestaurante",
-									"value": "6",
+									"value": "4",
 									"type": "text"
 								},
 								{
 									"key": "puntuacionMozo",
-									"value": "9",
+									"value": "1",
 									"type": "text"
 								},
 								{
 									"key": "puntuacionCocinero",
-									"value": "7",
+									"value": "4",
 									"type": "text"
 								},
 								{
 									"key": "comentario",
-									"value": "Buen Servicio",
+									"value": "Un desastre la mesa.",
 									"type": "text"
 								}
 							]
